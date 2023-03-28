@@ -1,0 +1,58 @@
+/* .nameTag {
+	border-radius: 20px;
+    top: 252px;
+    left: 100px;
+    height: 200px;
+    width: 400px;
+    position: absolute;
+	background-image: url(/img/logo.png);
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px 200px ;
+
+} */
+.nameTag {
+	position: relative;
+    top: 150px;
+    left: 25px;
+    height: 200px;
+    width: 400px;
+    position: absolute;
+	background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url(../img/logo.png);
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px 200px ;
+    border-radius: 20px;
+}
+
+.nameTag:before, .nameTag:after {
+    border-radius: 20px;
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #604439, #9e9a75,#1c222e,	#554840);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.nameTag:after {
+	filter: blur(50px);
+}

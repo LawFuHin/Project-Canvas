@@ -1,0 +1,203 @@
+* {
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+
+.canvas {
+  border: 1px white rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  position: fixed;
+  top: 150px;
+  left: 540px;
+}
+
+.eraserCursor {
+  cursor: url(/img/eraserCursor.svg) 22 22, default;
+}
+
+.crosshairCursor {
+  cursor: crosshair;
+}
+
+.canvas:hover {
+  animation: blinking2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blinking2 {
+  0% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.4);
+  }
+  8% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.5);
+  }
+  16% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.6);
+  }
+  24% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.7);
+  }
+  32% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.8);
+  }
+  40% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.9);
+  }
+  48% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 1);
+  }
+  56% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.9);
+  }
+  64% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.8);
+  }
+  72% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.7);
+  }
+  80% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.6);
+  }
+  88% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.4);
+  }
+}
+
+body {
+  background-image: url(../img/8277998.webp);
+  background-position: top;
+  background-size: cover;
+}
+
+.control-panel {
+  position: fixed;
+  bottom: 0px;
+}
+
+.menubar {
+  height: 70px;
+  top: 25px;
+  left: 25px;
+  border: 10px solid red;
+  width: 1800px;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.menubtn {
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.menubtn:hover {
+  transform: scale(1.1);
+  border: 1px solid grey;
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.01);
+  }
+  10% {
+    transform: scale(1.02);
+  }
+  15% {
+    transform: scale(1.03);
+  }
+  20% {
+    transform: scale(1.04);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  30% {
+    transform: scale(1.06);
+  }
+  35% {
+    transform: scale(1.07);
+  }
+  40% {
+    transform: scale(1.08);
+  }
+  45% {
+    transform: scale(1.09);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  55% {
+    transform: scale(1.09);
+  }
+  60% {
+    transform: scale(1.08);
+  }
+  65% {
+    transform: scale(1.07);
+  }
+  70% {
+    transform: scale(1.06);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(1.04);
+  }
+  85% {
+    transform: scale(1.03);
+  }
+  90% {
+    transform: scale(1.02);
+  }
+  95% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.currentFunction {
+  border: 3px solid Black;
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: scaling;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.curveline {
+  height: 30px;
+  margin-bottom: 3px;
+}
+
+.rhombus {
+  height: 30px;
+  margin-bottom: 3px;
+}
+
+.slider {
+  background: red;
+}

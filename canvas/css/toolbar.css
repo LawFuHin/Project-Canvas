@@ -1,0 +1,152 @@
+.block {
+	border-radius: 20px;
+    top: 420px;
+    left: 25px;
+    height: 450px;
+    width: 400px;
+    position: absolute;
+	background: rgba(150,150,150, 0.8);
+}
+
+.block:before, .block:after {
+    border-radius: 20px;
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(270deg, rgba(0,0,0,0.5), white,rgba(0,0,0,0.5));
+    
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 30s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}
+
+
+/* content */
+.block{
+    color: white;
+}
+.control-top{
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
+}
+.control-left{
+    font-size: 20px;
+    border: 1px solid black;
+}
+td{
+    text-align: center;
+}
+#slider{
+    width: 200px;
+}
+
+table, th, td{
+    font-size: 20px;
+
+}
+.tool{
+    width: 40%;
+}
+
+#title{
+    width: 220px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+#title:active{
+    transform: scale(1.1);
+}
+
+#slider{
+width: 225px;
+
+}
+#text-size{
+    height: 25px;
+    font-size: 20px;
+    text-align: right;
+    border-radius: 10px;
+}
+
+#text-size:active{
+transform: scale(1.1);
+}
+
+
+#color-picker{
+    width: 230px;
+    border-radius: 10px;
+}
+
+.download-button{
+    width: 125px;
+    margin: 0 135px;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;   
+}
+.download-button:hover{
+    transform: scale(1.2);
+    cursor: copy;
+}
+#color-picker:hover{
+    cursor: pointer;
+}
+#slider{
+    cursor: pointer;
+}
+.undo-redo{
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+.undo-redo{
+    cursor: pointer;
+}
+.undo-redo:hover{
+    transform: scale(1.2);
+}
+.seperate{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.undo-icon{
+    font-size: 20px;
+}
+
+#insert-text{
+    height: 25px;
+      width: 150px;
+      border-radius: 10px;
+      text-align: center;
+  }
+
+
